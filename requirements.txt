@@ -1,0 +1,34 @@
+# API
+fastapi==0.139.2
+uvicorn==0.51.0
+
+# Agent / Workflow
+langgraph==1.2.10
+
+# Vector Database
+chromadb==0.5.5
+
+# Embeddings
+sentence-transformers==3.0.1
+
+# LLM
+google-genai==2.14.0
+
+# Document Ingestion
+pypdf==6.14.2
+
+# Image / OCR
+pillow
+pytesseract
+
+# Web Ingestion
+beautifulsoup4
+requests
+
+# Configuration / Validation
+pydantic
+pydantic-settings
+python-dotenv
+
+# Logging
+loguru

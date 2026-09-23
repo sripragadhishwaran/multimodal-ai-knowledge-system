@@ -1,0 +1,43 @@
+# Virtual environment
+venv/
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+logs/
+
+# ChromaDB / generated vector data
+data/chroma_db/
+chroma_db/
+
+# Uploaded/generated knowledge files
+data/raw/uploads/
+
+# Python test/cache
+.pytest_cache/
+.coverage
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary test/output files
+test_output.txt
+get_calls.txt
+
+# Project backup/archive
+*.zip

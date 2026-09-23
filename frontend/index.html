@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Multimodal AI Knowledge System
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- ==================================================
+         APPLICATION
+    =================================================== -->
+
+    <div class="app">
+
+
+        <!-- ==================================================
+             SIDEBAR
+        =================================================== -->
+
+        <aside class="sidebar">
+
+
+            <!-- BRAND -->
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                    AI
+                </div>
+
+                <div>
+
+                    <h1>
+                        Knowledge AI
+                    </h1>
+
+                    <p>
+                        Multimodal RAG
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- SYSTEM -->
+
+            <div class="sidebar-section">
+
+                <p class="section-title">
+                    SYSTEM
+                </p>
+
+                <div
+                    id="connectionStatus"
+                    class="status offline"
+                >
+
+                    <span class="status-dot"></span>
+
+                    <span>
+                        Checking API...
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- CAPABILITIES -->
+
+            <div class="sidebar-section">
+
+                <p class="section-title">
+                    CAPABILITIES
+                </p>
+
+
+                <div class="capability">
+
+                    <span>
+                        📄
+                    </span>
+
+                    <span>
+                        PDF Knowledge
+                    </span>
+
+                </div>
+
+
+                <div class="capability">
+
+                    <span>
+                        🖼️
+                    </span>
+
+                    <span>
+                        Image Knowledge
+                    </span>
+
+                </div>
+
+
+                <div class="capability">
+
+                    <span>
+                        🔗
+                    </span>
+
+                    <span>
+                        Multi-content RAG
+                    </span>
+
+                </div>
+
+
+                <div class="capability">
+
+                    <span>
+                        🧠
+                    </span>
+
+                    <span>
+                        Grounded Answers
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- SIDEBAR BOTTOM -->
+
+            <div class="sidebar-bottom">
+
+
+                <!-- UPLOAD BUTTON -->
+
+                <button
+                    id="uploadButton"
+                    class="sidebar-upload-button"
+                    type="button"
+                >
+
+                    📤 Upload Knowledge
+
+                </button>
+
+
+                <!-- HIDDEN FILE INPUT -->
+
+                <input
+                    id="fileInput"
+                    type="file"
+                    accept=".pdf,.txt,.md,.png,.jpg,.jpeg,.webp"
+                    hidden
+                >
+
+
+                <!-- UPLOAD STATUS -->
+
+                <div
+                    id="uploadStatus"
+                    class="upload-status"
+                    aria-live="polite"
+                ></div>
+
+
+                <!-- POWERED BY -->
+
+                <p>
+                    Powered by
+                </p>
+
+                <span>
+                    LangGraph · ChromaDB · Gemini
+                </span>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- ==================================================
+             MAIN CONTENT
+        =================================================== -->
+
+        <main class="main">
+
+
+            <!-- ==================================================
+                 HEADER
+            =================================================== -->
+
+            <header class="header">
+
+                <div>
+
+                    <h2>
+                        Multimodal AI Knowledge Assistant
+                    </h2>
+
+                    <p>
+                        Ask questions about your indexed knowledge.
+                    </p>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- ==================================================
+                 CHAT AREA
+            =================================================== -->
+
+            <section
+                id="chatContainer"
+                class="chat-container"
+            >
+
+
+                <!-- ==================================================
+                     WELCOME
+                =================================================== -->
+
+                <div
+                    id="welcome"
+                    class="welcome"
+                >
+
+                    <div class="welcome-icon">
+                        ✦
+                    </div>
+
+
+                    <h2>
+                        Ask your knowledge base
+                    </h2>
+
+
+                    <p>
+                        Ask questions about PDFs, images,
+                        AI concepts, roadmaps, and more.
+                    </p>
+
+
+                    <!-- SUGGESTIONS -->
+
+                    <div class="suggestions">
+
+
+                        <button
+                            class="suggestion"
+                            type="button"
+                            data-question="What is AI?"
+                        >
+                            What is AI?
+                        </button>
+
+
+                        <button
+                            class="suggestion"
+                            type="button"
+                            data-question="What topics are included in the Generative AI roadmap?"
+                        >
+                            Generative AI roadmap
+                        </button>
+
+
+                        <button
+                            class="suggestion"
+                            type="button"
+                            data-question="Compare the information in the PDF with the Generative AI roadmap image."
+                        >
+                            Compare PDF & roadmap
+                        </button>
+
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ==================================================
+                 INPUT AREA
+            =================================================== -->
+
+            <div class="input-wrapper">
+
+
+                <div class="input-box">
+
+
+                    <textarea
+                        id="questionInput"
+                        rows="1"
+                        placeholder="Ask a question..."
+                    ></textarea>
+
+
+                    <button
+                        id="askButton"
+                        class="ask-button"
+                        type="button"
+                        title="Ask"
+                    >
+                        ➤
+                    </button>
+
+
+                </div>
+
+
+                <p class="input-hint">
+                    Answers are generated from your indexed knowledge base.
+                </p>
+
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+
+    <!-- ==================================================
+         JAVASCRIPT
+    =================================================== -->
+
+    <script
+        src="app.js"
+    ></script>
+
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+LangGraph is a stateful orchestration framework for building AI agents.
+
+LlamaIndex specializes in ingesting and indexing data.
+
+ChromaDB stores vector embeddings for semantic retrieval.
+
+Incremental indexing allows the system to detect changes in documents automatically.
+
+This document is used to test incremental indexing and metadata preservation.
